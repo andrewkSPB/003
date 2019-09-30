@@ -1,0 +1,68 @@
+
+ form{
+
+    width: 100%;
+    background: #f4f7fa;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+ input{
+    
+    font-size: 50px;
+    padding: 5px 0;
+    color: #313541;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;   
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+}
+ h1{
+    /* font-size: 40px; */
+    text-align: center;
+    text-shadow: -2px 1px 3px rgba(150, 150, 150, 1);
+}
+ input, h1, button{
+
+    display: block;
+    width: 70%;
+    
+    border:none;
+    outline: none;
+}
+ button {
+    letter-spacing: 20px;
+    background: #dc5a60;
+    color: white;
+    border: 1px solid #f4f7fa;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 50px;
+    font-weight: bold;   
+}
+ button:hover{
+    background: white;
+    transition: 0.7s ease;
+    border: 1px solid #dc5a60;
+    color: #dc5a60;
+}
+ h1 {
+    letter-spacing: 20px;
+    color: #313541;
+}
+ 
+.authValid{
+    color: #dc5a60;
+    font-size: 20px;
+    font-weight: bold;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+   0% { color: rgba(220, 90, 96, 1); }
+   50% {  color: rgba(220, 90, 96, 0); }
+   100% { color: rgba(220, 90, 96, 1);  }
+}

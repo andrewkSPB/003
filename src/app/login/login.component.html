@@ -1,0 +1,15 @@
+
+    <form [formGroup]="authForm" (ngSubmit)="onAuthFormSubmit(authForm.value)">
+      <h1>LOGIN</h1>
+
+      <input  type="text" placeholder="Your Email" formControlName="email">
+      <div class="authValid" *ngIf="authForm.controls.email.invalid && authForm.controls.email.touched">
+        Please, Enter Valid Email
+      </div>
+      <input type="text" placeholder="Your Password" formControlName="password">
+      <div class="authValid" *ngIf="authForm.controls.password.invalid && authForm.controls.password.touched">
+        Please, Enter Password
+      </div>
+      <button type="submit" [disabled]="authForm.invalid">LOGIN</button>
+      <a class="createAccount" type="submit" (click)="onCreateAccount()">Create Account</a>
+    </form>

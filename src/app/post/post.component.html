@@ -1,0 +1,18 @@
+  <div class="single__post" *ngFor="let post of postTest">
+    <div class="comment">
+      <div class="comment__logo">
+              USER <br>
+              LOGO
+      </div>
+      <div class="comment__text">
+          <p class="comment__text__title">
+              {{post.user}}
+          </p>
+          <hr>
+          <div class="contenteditable" contenteditable="false">{{post.text}}</div>
+      </div>
+  </div>
+    <div class="single__post__img">
+      <img *ngIf="post.imgCDN" class="img__itself" src={{post.imgCDN}} alt="">
+    </div>
+  </div>

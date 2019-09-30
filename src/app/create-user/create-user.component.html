@@ -1,0 +1,19 @@
+
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm.value)">
+        <h1>CREATE ACCOUNT</h1>
+  
+        <input  type="text" placeholder="Your Name" class="form__name" formControlName="name">
+        <div *ngIf="createForm.controls.name.invalid && createForm.controls.name.touched" class="authValid">
+            Please, Enter Name         
+        </div>
+        <input type="text" placeholder="Your Email" formControlName="email">
+        <div *ngIf="createForm.controls.email.invalid && createForm.controls.email.touched" class="authValid">
+            Please, Enter Valid Email         
+        </div>
+        <input type="text" placeholder="Your Password" formControlName="password">
+        <div *ngIf="createForm.controls.password.invalid && createForm.controls.password.touched" class="authValid">
+            Please, Enter Password         
+        </div>
+        <button type="submit" [disabled]="createForm.invalid">CREATE</button>
+      </form>
+  

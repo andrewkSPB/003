@@ -1,0 +1,11 @@
+<form [formGroup]="postForm" enctype="multipart/form-data" (ngSubmit)="onSubmit(postForm.value)">
+    <textarea formControlName='text' id="" cols="30" rows="8" maxlength="400" placeholder='Enter Your Text' ></textarea>
+    <!-- <div class="validationDisplay" *ngIf="postForm.controls.text.invalid">
+        Text Is Required
+    </div> -->
+    <img class="edit__img" [src]='imgUrl' alt="">
+    <input type="hidden"  [(ngModel)]='imgUrl' formControlName="imgCDN">
+    <input type="hidden"  [(ngModel)]='userId' formControlName="user">
+    <input *ngIf="imgUrl === '' ? true: false" class="fileInput" type="file" (change)="onFileSelected($event)">
+    <button type="submit" [disabled]="postForm.controls.text.value === '' && imgUrl == '' ">POST</button>
+</form>

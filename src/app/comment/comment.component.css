@@ -1,0 +1,64 @@
+
+.comment{
+    width: 100%;
+    min-height: 100px;
+    
+    display: flex;
+    
+}
+.comment__logo{
+    min-width: 100px;
+   
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+  
+    color: #dc5a60;
+    font-weight: bold;
+}
+
+.comment__text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+
+    /* magic that keep text inside parent div, actualy wtf? */
+    width: 1%;
+    /* magic that keep text inside parent div, actualy wtf? */
+    
+    
+}
+.contenteditable{
+    
+    width: 100%;
+    
+    flex-grow: 1;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    padding: 3px 10px;
+    background: none;
+    border: none;
+    color: #76808f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+.comment__text__text{
+    flex-grow: 1;
+    
+}
+.comment__text__title{
+    padding: 3px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #313541 
+    /* 313541 */
+}
+
+.comment hr{
+    width: 100%;
+    margin: 0;
+}
