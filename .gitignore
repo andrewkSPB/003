@@ -6,7 +6,8 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-
+# keys
+config/keys.js
 # dependencies
 /node_modules
 
