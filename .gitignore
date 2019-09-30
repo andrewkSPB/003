@@ -7,9 +7,9 @@
 # Only exists if Bazel was run
 /bazel-out
 # dist
-img-board/
+/img-board
 # keys
-config/keys.js
+keys.js
 # dependencies
 /node_modules
 
