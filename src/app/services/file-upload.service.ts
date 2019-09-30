@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { Post } from '../models/post';
+ 
+
+const url = `http://localhost:80/api`
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,18 +13,17 @@ export class FileUploadService {
 
   constructor(private http: HttpClient) { }
 
-  readonly url = 'http://localhost:3000/api'
 
   postFile(body){
     
-    return this.http.post(`${this.url}/post/cdn`, body, {responseType: 'text'})
+    return this.http.post(`${url}/post/cdn`, body, {responseType: 'text'})
       
   }
   createPost(body){
-    return this.http.post(`${this.url}/post/create`, body)
+    return this.http.post(`${url}/post/create`, body)
   }
   getAllPosts():Observable<Post[]>{
-    return this.http.get<Post[]>(`${this.url}/post/all`)
+    return this.http.get<Post[]>(`${url}/post/all`)
   }
 
 }

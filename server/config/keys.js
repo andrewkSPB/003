@@ -8,6 +8,7 @@ module.exports = {
     },
     mongoURI: 'mongodb+srv://aad:aad@newcluster-d2rra.mongodb.net/BOARD?retryWrites=true&w=majority',
     jwtSecret: 'qwewdcsadf4323',
-    sessionSecret: 'we329r324rfd'
+    sessionSecret: 'we329r324rfd',
+    port: process.env.PORT || 3000
     
 }
